@@ -83,20 +83,6 @@
 
   
   <url>
-    <loc>https://jkwzs.cn/tags/Artificial-Intelligence/</loc>
-    <lastmod>2022-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jkwzs.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jkwzs.cn/tags/Vue/</loc>
     <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,17 +96,31 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://jkwzs.cn/categories/Artificial-Intelligence/</loc>
+    <loc>https://jkwzs.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
+    <loc>https://jkwzs.cn/tags/Artificial-Intelligence/</loc>
+    <lastmod>2022-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://jkwzs.cn/categories/Vue/</loc>
+    <lastmod>2022-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkwzs.cn/categories/Artificial-Intelligence/</loc>
     <lastmod>2022-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
