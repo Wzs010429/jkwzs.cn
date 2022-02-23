@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jkwzs.cn/bangumis/index.html</loc>
+    
+    <lastmod>2022-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jkwzs.cn/2022/02/22/Java%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
     
     <lastmod>2022-02-22</lastmod>
@@ -103,7 +112,7 @@
 
   <url>
     <loc>https://jkwzs.cn/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,35 +120,35 @@
   
   <url>
     <loc>https://jkwzs.cn/tags/Java/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/Artificial-Intelligence/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/Vue/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -148,21 +157,21 @@
   
   <url>
     <loc>https://jkwzs.cn/categories/Java/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/Artificial-Intelligence/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/Vue/</loc>
-    <lastmod>2022-02-22</lastmod>
+    <lastmod>2022-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
