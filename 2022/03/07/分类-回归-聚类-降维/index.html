@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>分类,回归,聚类,降维 | 南花醉笔丶の个人博客</title><meta name="keywords" content="笔记,机器学习,数据挖掘"><meta name="author" content="南花醉笔,jkwzs0429@gmail.com"><meta name="copyright" content="南花醉笔"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="分类,回归,聚类,降维">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分类,回归,聚类,降维">
+<meta property="og:url" content="https://jkwzs.cn/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/index.html">
+<meta property="og:site_name" content="南花醉笔丶の个人博客">
+<meta property="og:description" content="分类,回归,聚类,降维">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jkwzs.cn/img/img_9.png">
+<meta property="article:published_time" content="2022-03-07T07:58:13.000Z">
+<meta property="article:modified_time" content="2022-03-08T08:03:01.480Z">
+<meta property="article:author" content="南花醉笔">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="数据挖掘">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jkwzs.cn/img/img_9.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jkwzs.cn/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="code-q34fyLJTbp"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: 南花醉笔","link":"Link: ","source":"Source: 南花醉笔丶の个人博客","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '分类,回归,聚类,降维',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-08 16:03:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/myself.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener external nofollow noreferrer" href="https://music.163.com/#/user/home?id=122634067"><i class="fa-fw fas fa-music"></i><span> Cloud Music</span></a></li><li><a class="site-page child" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/22035617"><i class="fa-fw fas fa-video"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa fa-bell"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/img_9.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">南花醉笔丶の个人博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener external nofollow noreferrer" href="https://music.163.com/#/user/home?id=122634067"><i class="fa-fw fas fa-music"></i><span> Cloud Music</span></a></li><li><a class="site-page child" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/22035617"><i class="fa-fw fas fa-video"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa fa-bell"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">分类,回归,聚类,降维</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-07T07:58:13.000Z" title="Created 2022-03-07 15:58:13">2022-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-08T08:03:01.480Z" title="Updated 2022-03-08 16:03:01">2022-03-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>4min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="分类,回归,聚类,降维"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>笔记摘录自bilibili网课数据挖掘</p>
+</blockquote>
+<h1>分类，回归，聚类，降维</h1>
+<h2 id="分类-Classify">分类 Classify</h2>
+<p>分类可以看作是机器学习中的有监督学习（supervised learning）</p>
+<blockquote>
+<p>有监督学习：是指数据是有标记，可以量化的。针对日常生活中的某一个个体的相关数据，通过数据标签可以量化出一个专属于这个个体的特性类别，我们称这样的类别是标签（lable/target），是有监督学习的体现。</p>
+</blockquote>
+<p>一个最经典的例子：<strong>性别预测问题</strong>，这是一个典型的分类问题。针对每一个人，我们可以根据他的外表数据，行为数据，来推断出这个人是男性还是女性。我们之所以可以随机的看一个人就可以立刻辨别出他（她）的性别，是因为一些性别的专属特征已经固化在我们脑海中。</p>
+<p>有关人的特征数据（例如身高，体重，相关行为）我们用一个向量组来表示，组中元素被称为<strong>特征元素</strong>，例如[身高（height），体重（weight），相关行为（behavior）]，我们称这是一个<strong>3维数据</strong>。</p>
+<p>如何体现监督行为？在每一组特征元素向量数据$X$最后，会有一个特征标记$Y$，被称作标签（lable/target），是对当前向量组中数据元素的总结，如果没有这个特征标记则体现为<strong>无监督学习</strong>。</p>
+<p>有监督学习的基本向量组的表达方式为</p>
+<h3 id="分类的向量组和数据矩阵">分类的向量组和数据矩阵</h3>
+<p>$$[data \mid label]$$</p>
+<p>假设整个数据组中存在$N$个人，每个人具有$P$个特征元素，则我们可以得到一个$N \times P$ 数据矩阵，其中$N$为个数，$P$为特征数。数据元素统一用$X$来表示，label则用$Y$来表示。</p>
+<img src="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/1.jpeg" class="">
+<blockquote>
+<p><strong>图片勘误</strong>：最下方角标应该是$P \mid Y$，而不是$P$，$P$只表示竖线左侧的数据元素而不表示标签。</p>
+</blockquote>
+<h3 id="分类的模型训练过程">分类的模型训练过程</h3>
+<p>首先我们通过已知的1特征数据矩阵（包括特征元素和target标签）来训练模型，今儿对没有label的全新的数据元素（dew data）向量组进行标记，得出label。并且尽可能保证推断出的label标记和真实情况的label保持一致。准确性（accuracy）越高，说明模型训练得越好。</p>
+<img src="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/2.jpeg" class="">
+<p>新模型中的数据维度可能与原数据不相同，虽然模型过程是数据矩阵的形式，但是本质上是对每一个数据元素向量组的推断，通过已有模型得出target label。</p>
+<h2 id="回归-Regression">回归 Regression</h2>
+<p>回归是我们最早接触的一种数据化类类型，例如我们初中就接触过的线性关系：探寻身高与体重的关系等等。</p>
+<p>分类和回归因为目标不同，所以导致最后的label也不是一致的。分类重在对以后数据进行模型训练，进而对新的没有进行分类的数据进行推断，得出新数据的label。而回归重在对原始数据的内在联系进行分析。对于给定的特性元素向量组和标签label，通过回归来找到内在关系。</p>
+<h3 id="基本回归变量类型">基本回归变量类型</h3>
+<ul>
+<li>数值型变量 numerical data</li>
+<li>类别型变量 categorical data
+<ul>
+<li>二分类变量 binary data</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>数值型变量和类别型变量的最明显区别：数值型变量可以进行比较（comparable），类别型变量不能比较（uncomparable）在类别型变量中讨论最多的就是二分类变量</p>
+</blockquote>
+<p>$$Y = \alpha x_{1} + \beta x_{2} + … +\gamma x_{n}$$</p>
+<p>其实就是我们常见的模型关系，上述公式表述的是数据型变量的关系，而类别型变量就是将具有某一特性类别集合的特征向量组聚合起来，找出共性关系。</p>
+<p>写成数据矩阵的形式如下图：</p>
+<img src="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/3.jpeg" class="">
+<h2 id="聚类-Clustering">聚类 Clustering</h2>
+<p>聚类是无监督学习（unsupervised learning）的代表，即数据无标注（没有label）。</p>
+<p>聚类是针对于数据本身进行的划分，相当于做了一个<strong>特征工程</strong>。其目的本质上就是为了让数据变得更“好看一点”，数据聚合可以<strong>让组内数据更加紧密，让组间数据差异尽可能更大</strong>。诸如聚类的无监督学习其实是作为有监督学习的辅助，让有监督学习可以更好地执行。</p>
+<h2 id="聚类模型训练过程">聚类模型训练过程</h2>
+<p>针对一个没有label的数据矩阵，对该矩阵进行标记，即使用一个已经进行过聚类的数据组来训练模型，然后让一组新的，没有进行聚类的数据进行聚类划分。得到一个一个的特征集群。</p>
+<img src="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/4.jpeg" class="">
+<p>其中$X$为特征向量，$N$为组数，$P$为特征元素，可以很明显看出来聚类后特征元素被区分成不同的组（特征类群）。</p>
+<h2 id="降维-Dimension-Reduction">降维 Dimension Reduction</h2>
+<img src="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/5.jpeg" class="">
+<p>降维也是无监督学习的一种，通过减少冗余特征元素的方式实现对数据的优化，一般情况下，降维之后的特征元素维度要低于降维之前，即$P &gt; P^{`}$</p>
+<ul>
+<li>数据相关信息可能会丢失</li>
+<li>降维可以减少数据噪声</li>
+<li>降维可以对数据进行清洗，让脏数据变干净</li>
+</ul>
+<h3 id="高维度数据和低维度数据">高维度数据和低维度数据</h3>
+<ul>
+<li>高维数据 High-demensional Data</li>
+<li>低维数据 Low-dimensional Data</li>
+</ul>
+<blockquote>
+<p>如何判断一个数据矩阵是高维数据矩阵还是低维数据矩阵？<br>
+如果在一个数据矩阵中，如果$P &gt; N$，则我们认为这个数据矩阵一般是高维度的，因为这样的数据矩阵在多元线性回归中并不能拟合出相关线性。</p>
+</blockquote>
+<p>其实一般认为如果$N$约等于$P$也被算作高维度数据矩阵，具体要看模型效果，并不是绝对的。还有一种特殊情况，如果说在数据特征向量组中，有一组数据响亮可以通过另一组数据向量演化过来的。这样的数据被称为多重多样性，我们也认为这是高维度数据。</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>分类,回归,聚类,降维</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://jkwzs.cn/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/">https://jkwzs.cn/2022/03/07/分类-回归-聚类-降维/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>南花醉笔</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-03-07</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-03-08</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener external nofollow noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener external nofollow noreferrer" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></div><div class="post_share"><div class="social-share" data-image="/img/img_9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatpay.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/22/Java%E5%86%85%E9%83%A8%E7%B1%BB/"><img class="next-cover" src="/img/img_8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java内部类</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/02/18/Intro-to-AI-Chapter-1-Search/" title="Intro to AI Chapter 1 Search"><img class="cover" src="/img/img_2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-18</div><div class="title">Intro to AI Chapter 1 Search</div></div></a></div><div><a href="/2022/02/19/Intro-to-AI-Chapter-2-Knowledge/" title="Intro to AI Chapter 2 Knowledge"><img class="cover" src="/img/img_3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-19</div><div class="title">Intro to AI Chapter 2 Knowledge</div></div></a></div><div><a href="/2022/02/20/Intro-to-AI-Chapter-3-Uncertainty/" title="Intro to AI Chapter 3 Uncertainty"><img class="cover" src="/img/img_4.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-20</div><div class="title">Intro to AI Chapter 3 Uncertainty</div></div></a></div><div><a href="/2022/02/22/Vue3%E8%83%8C%E6%99%AF%E8%AE%A4%E8%AF%86%E5%92%8C%E9%9D%A2%E8%AF%95%E7%82%B9/" title="Vue3背景认识和面试点"><img class="cover" src="/img/img_5.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-22</div><div class="title">Vue3背景认识和面试点</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/myself.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">南花醉笔</div><div class="author-info__description">给自己买花 陪自己长大</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Wzs01049"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Wzs01049" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jkwzs0429@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="tencent://message/?uin=1119127845&amp;Site=admin5.com&amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/22035617?spm_id_from=333.1007.0.0" rel="external nofollow noreferrer" target="_blank" title="bilibili"><i class="fas fa-file-video"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Hey👋！ 欢迎来到南花醉笔丶の个人站！ 会在这里分享学习和日常！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">分类，回归，聚类，降维</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB-Classify"><span class="toc-number">1.1.</span> <span class="toc-text">分类 Classify</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E7%9A%84%E5%90%91%E9%87%8F%E7%BB%84%E5%92%8C%E6%95%B0%E6%8D%AE%E7%9F%A9%E9%98%B5"><span class="toc-number">1.1.1.</span> <span class="toc-text">分类的向量组和数据矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">分类的模型训练过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92-Regression"><span class="toc-number">1.2.</span> <span class="toc-text">回归 Regression</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%9B%9E%E5%BD%92%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">基本回归变量类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E7%B1%BB-Clustering"><span class="toc-number">1.3.</span> <span class="toc-text">聚类 Clustering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">聚类模型训练过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%8D%E7%BB%B4-Dimension-Reduction"><span class="toc-number">1.5.</span> <span class="toc-text">降维 Dimension Reduction</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BB%B4%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%92%8C%E4%BD%8E%E7%BB%B4%E5%BA%A6%E6%95%B0%E6%8D%AE"><span class="toc-number">1.5.1.</span> <span class="toc-text">高维度数据和低维度数据</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/" title="分类,回归,聚类,降维"><img src="/img/img_9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="分类,回归,聚类,降维"/></a><div class="content"><a class="title" href="/2022/03/07/%E5%88%86%E7%B1%BB-%E5%9B%9E%E5%BD%92-%E8%81%9A%E7%B1%BB-%E9%99%8D%E7%BB%B4/" title="分类,回归,聚类,降维">分类,回归,聚类,降维</a><time datetime="2022-03-07T07:58:13.000Z" title="Created 2022-03-07 15:58:13">2022-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/Java%E5%86%85%E9%83%A8%E7%B1%BB/" title="Java内部类"><img src="/img/img_8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java内部类"/></a><div class="content"><a class="title" href="/2022/02/22/Java%E5%86%85%E9%83%A8%E7%B1%BB/" title="Java内部类">Java内部类</a><time datetime="2022-02-22T12:21:01.000Z" title="Created 2022-02-22 20:21:01">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/Comparable%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Comparable接口的实现与使用"><img src="/img/img_7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Comparable接口的实现与使用"/></a><div class="content"><a class="title" href="/2022/02/22/Comparable%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Comparable接口的实现与使用">Comparable接口的实现与使用</a><time datetime="2022-02-22T12:15:44.000Z" title="Created 2022-02-22 20:15:44">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/static%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%A3%B0%E6%98%8E%E5%92%8C%E8%B5%8B%E5%80%BC%E9%97%AE%E9%A2%98/" title="static静态属性声明和赋值问题"><img src="/img/img_6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="static静态属性声明和赋值问题"/></a><div class="content"><a class="title" href="/2022/02/22/static%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%A3%B0%E6%98%8E%E5%92%8C%E8%B5%8B%E5%80%BC%E9%97%AE%E9%A2%98/" title="static静态属性声明和赋值问题">static静态属性声明和赋值问题</a><time datetime="2022-02-22T12:08:47.000Z" title="Created 2022-02-22 20:08:47">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/Vue3%E8%83%8C%E6%99%AF%E8%AE%A4%E8%AF%86%E5%92%8C%E9%9D%A2%E8%AF%95%E7%82%B9/" title="Vue3背景认识和面试点"><img src="/img/img_5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue3背景认识和面试点"/></a><div class="content"><a class="title" href="/2022/02/22/Vue3%E8%83%8C%E6%99%AF%E8%AE%A4%E8%AF%86%E5%92%8C%E9%9D%A2%E8%AF%95%E7%82%B9/" title="Vue3背景认识和面试点">Vue3背景认识和面试点</a><time datetime="2022-02-21T21:24:30.000Z" title="Created 2022-02-22 05:24:30">2022-02-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="footer_custom_text"><div class="copyright">©undefined - 2021 Spark Wang</div><div class = "together">南花醉笔 <i class="fa fa-heart"></i> 梦醉樱殇</div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" rel="external nofollow noreferrer" style="margin-inline:5px"><img src="https://cdn.jsdelivr.net/gh/thefine/thefine.github.io/badge/Frame-Hexo.svg"></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" rel="external nofollow noreferrer" style="margin-inline:5px"><img src="https://cdn.jsdelivr.net/gh/thefine/thefine.github.io/badge/Theme-Butterfly.svg"></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" rel="external nofollow noreferrer" style="margin-inline:5px"><img src="https://cdn.jsdelivr.net/gh/thefine/thefine.github.io/badge/CDN-jsDelivr.svg"></a><a class="github-badge" target="_blank" href="https://thefine.github.io/" rel="external nofollow noreferrer" style="margin-inline:5px"><img src="https://cdn.jsdelivr.net/gh/thefine/thefine.github.io/badge/Source-Github.svg"></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" style="margin-inline:5px"><img src="https://cdn.jsdelivr.net/gh/thefine/thefine.github.io/badge/Copyright-BY--NC--SA.svg"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Local search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'nzI0Ix8YrcNiToJLi4r4CQhy-gzGzoHsz',
+      appKey: 'Aaa8O2yLqtjpy42Ea7KgNew7',
+      avatar: 'mm',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="7305110547" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body></html>
