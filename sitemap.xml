@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jkwzs.cn/2022/03/09/%E5%89%91%E6%8C%87Offer-Day01/</loc>
+    
+    <lastmod>2022-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jkwzs.cn/2022/03/08/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E6%A6%82%E8%BF%B0-%E8%AF%AD%E4%B9%89%E6%A6%82%E8%BF%B0/</loc>
     
     <lastmod>2022-03-08</lastmod>
@@ -130,7 +139,7 @@
 
   <url>
     <loc>https://jkwzs.cn/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,56 +147,70 @@
   
   <url>
     <loc>https://jkwzs.cn/tags/Java/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/Artificial-Intelligence/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/Vue/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkwzs.cn/tags/%E5%89%91%E6%8C%87Offer/</loc>
+    <lastmod>2022-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkwzs.cn/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -196,35 +219,42 @@
   
   <url>
     <loc>https://jkwzs.cn/categories/Java/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/Artificial-Intelligence/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/Vue/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jkwzs.cn/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jkwzs.cn/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2022-03-08</lastmod>
+    <lastmod>2022-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
